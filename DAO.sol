@@ -23,13 +23,13 @@ to automate organizational governance and decision-making.
 
 import "./TokenCreation.sol";
 
-pragma solidity ^0.4.4;
+pragma solidity ^0.8.6;
 
 contract DAOInterface {
     // The minimum debate period that a generic proposal can have
     uint constant minProposalDebatePeriod = 2 weeks;
     // The minimum debate period that a split proposal can have
-    uint constant quorumHalvingPeriod = 25 weeks;
+    uint constant quorumHalvingPeriod = 17 weeks;
     // Period after which a proposal is closed
     // (used in the case `executeProposal` fails because it throws)
     uint constant executeProposalPeriod = 10 days;
@@ -37,7 +37,7 @@ contract DAOInterface {
     uint constant preSupportTime = 2 days;
     // Denotes the maximum proposal deposit that can be given. It is given as
     // a fraction of total Ether spent plus balance of the DAO
-    uint constant maxDepositDivisor = 100;
+    uint constant maxDepositDivisor = ();
 
     //Token contract
     Token token;
